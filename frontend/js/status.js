@@ -5,7 +5,7 @@ $(document).ready(function(){
     $.get('/getstat', function(results){
 
  // getStub('/getLanding', function(results){
-    var tableString = "<tr><th>Req #</th><th>Cost</th><th>Supervisor</th><th>Dept Head</th><th>VP</th></tr>";
+    var tableString = "<tr><th>Request #</th><th>Cost</th><th>Supervisor</th><th>Dept Head</th><th>VP</th></tr>";
    
    
     $.each(results, function(index, rowObject){

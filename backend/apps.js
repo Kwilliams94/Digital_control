@@ -162,13 +162,13 @@ app.get('/aLanding', function(req,res){
 
 //POSTING INFO
  
-app.post('/addzUi', function(req,res){
+app.post('/appSend', function(req,res){
       var sql = `
-   INSERT INTO empl_info (id,name,email) 
-   VALUES ('${req.body.id}', '${req.body.name}', '${req.body.email}');
+   Update ttx_empl_trng_reqst (Trng_Reqst_Immed_Supv_Apvl_Flg)
+   VALUES ('${req.body.Trng_Reqst_Immed_Supv_Apvl_Flg}');
   `;
         database.executeQuery(sql);
-   console.log('posted to /addzUi');
+   console.log('posted to the database');
   console.log(JSON.stringify(req.body));
   return res.send("success");
 });
