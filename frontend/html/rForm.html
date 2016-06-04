@@ -9,9 +9,8 @@
     <title>Training Request Form</title>
     
   <header class="banner">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>   
-    <script type="text/javascript" src="../js/rForm.js"></script>
-      <h3 align="center">Training Request Form</h3>
+    
+      <h1 align="center"><b>Training Request Form</b></h1>
       
   </header>
 
@@ -23,8 +22,9 @@
     <![endif]-->
   
    <nav class="navbar navbar-inverse navbar fixed-top">
-  <div class="container-fluid">
+    <div class="container-fluid">
     <div class="navbar-header">
+        
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -32,83 +32,108 @@
       </button>
       <a class="navbar-brand" href="#">Scott Wissel</a>
     </div>
+    
+            <!----------------HREF LINKS!!------>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="https://nodeclone-jrbella.c9users.io/aLanding">Home</a></li>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="https://nodeclone-jrbella.c9users.io/aLanding">Waiting for Approval</a></li>
         <li><a href="https://nodeclone-jrbella.c9users.io/status">Status</a></li>
         <li><a href="https://nodeclone-jrbella.c9users.io/cHistory">My Course History</a></li>
-		<li><a href="https://nodeclone-jrbella.c9users.io/rForm">Request Training</a></li>
-		<li><a href="#">Contact Us</a></li>
+		<li><a href="#">Request Training</a></li>
       </ul>
-      
     </div>
   </div>
 </nav>
+
               <!--------HERE IS THE BODY!!!!! -------->
   <body>
   
-            
-  
     <!--COL Bootstrap -->
-    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" />
     
                             <!---CUSTOM CSS--->
     
      <style> 
   
-    .navbar-brand{
-      font-family:Verdana, Arial, Helvetica, sans-serif;
-      font-size: 20px;}
+      .navbar-brand{font-family:Verdana, Arial, Helvetica, sans-serif;
+      font-size: 20px; 
+      background: #983222;}
+      
+      .navbar{background-color: #983222;
+              font: white;}
       
     header {font-family:Arial, Helvetica, sans-serif;
             margin-top: 0px;
             margin-bottom: -5px;
             margin-top: -20px;
             padding-top: 0px;
-    	      padding-bottom: 5px;}
+    	      padding-bottom: 5px;
+            border: bold;}
     	      
     	      
-    body    {padding-left: 4px;
+    body    {background-color: #D9D9D9;
+             padding-left: 4px;
              padding-right:20px;
-             margin-left: auto;
+             margin-left: 20px;
              margin-right: auto;}
   
     section {background-color: white;
 	           margin-top: 10px;
 	           padding: 5px;}
+
 	           
     Article {font-family:Verdana, Arial, Helvetica, sans-serif;
-              color:white;
+              color:#983222;
               background-color: #983222;
-    	        margin-top: -20px;
+              margin-left: 1px;
+    	        margin-top: -5px;
     	        margin-bottom: -10px;}
     	        
     .form-group {width: 250px;}
-  
-  </style>
-  
-        <article>
-    <h3>Course Information</h3>
-        </article>
-  
-    <section>
-    <!--------KEEP---->
+      
+    #footer {clear: both;
+            	background-color: #983222;
+            	color: white;
+            	padding: 3px;
+            	margin-bottom: 1px;
+            	margin-top: 40px;
+            	font-size: 17.5px;}
+            	
+    button {position: center;}
     
-    <form id = "addEmployeeForm">
+    .btn-lg {
+      background: #983222;
+      color: #fff;}
+      
+    .btn-lg:hover {
+      background: #fff;
+      color: #983222;}
+      
+      .panel:background-color:{red}
+    
+  </style>
+                     <!---------END CUSTOM CSS------->
+                     
+    <main>
+	
+  <div class="panel panel-default">
+  
+  <div class="panel-heading">
+    <h3 class="panel-title">Course Information</h3>
+  </div>
+      
+  <div class="panel-body">
+      
     <div class="container">
     <div class="row">
       
-     <!-------------COL 1 --->
+    <!-------------COL 1 --->
      
       <div class="col-sm-4">
       <div class="form-group">
       <br>
-      <div class="form-group">
-      <label for="trng_reqst_nbr">Training Request #</label>
-      <input type="text" class="form-control" name="trng_cors_strt_dt" placeholder="req #"/>
-      </div>
-      
       <label for="cor_info">Course Type</label>
       
         <select class="form-control" id="cor_info">
@@ -122,34 +147,35 @@
       </div>
       
       <div class="form-group">
-      <label for="trng_cors_strt_dt">Start Date</label>
-      <input type="text" class="form-control" name="trng_cors_strt_dt" placeholder="Start Date"/>
+      <label for="reqst_nbr">Course # or ID</label>
+      <input type="number" class="form-control" name="reqst_nbr" placeholder="Enter Course ID"/>
       </div>
       
       <div class="form-group">
-      <label for="Location">Location</label>
-      <input type="text" class="form-control" name="Location" placeholder="Enter Location"/>
+      <label for="trng_cors_nm">Course Name</label>
+      <input type="name" class="form-control" name="trng_cors_nm" placeholder="Enter Course"/>
       </div>
       
     </div>
+    
     <!-------------COL 2 --->
     
     <div class="col-sm-4">
       
       <br>
       <div class="form-group">
-      <label for="trng_cors_nm">Course Name</label>
-      <input type="text" class="form-control" name="trng_cors_nm" placeholder="Enter Course"/>
+      <label for="trng_cors_strt_dt">Start Date</label> 
+      <input type="date" class="form-control" name="trng_cors_strt_dt" placeholder="Start Date"/>
       </div>
       
       <div class="form-group">
       <label for="trng_cors_end_dt">End Date</label>
-      <input type="text" class="form-control" name="trng_cors_end_dt" placeholder="End Date"/>
+      <input type="date" class="form-control" name="trng_cors_end_dt" placeholder="End Date"/>
       </div>
       
       <div class="form-group">
       <label for="trng_cors_cost">Cost</label>
-      <input type="text" class="form-control" name="trng_cors_nm" placeholder="Enter Cost"/>
+      <input type="text" class="form-control" name="trng_cors_cost" placeholder="Enter Cost"/>
       </div>
       
     </div>
@@ -159,80 +185,117 @@
 
       <br>
       <div class="form-group">
-      <label for="reqst_nbr">Course # or ID</label>
-      <input type="text" class="form-control" name="reqst_nbr" placeholder="Enter Course ID"/>
+      <label for="Location">Location</label>
+      <input type="text" class="form-control" name="trng_cors_locn" placeholder="Enter Location"/>
       </div>
       
       <br>
       <div class="form-group">
       <label for="total_hours">Total Hours</label>
-      <input type="text" class="form-control" name="total_hours" placeholder="Enter Total Hours"/>
+      <input type="number" class="form-control" name="total_hours" placeholder="Enter Total Hours"/>
       </div>
-      <br>
-    <!----------COL 1 = VENDOR INFO--->
-  </div>
-   </div>
-   </section>
-   
-             <article>
-    <h3>Vendor Information</h3>
-             </article>
       
+	</div>
+	</div>
+	
+	</div>
+  </div>
+	
+    <!----------COL 1 = VENDOR INFO--->
+    
+    <div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Vendor Information</h3>
+  </div>
+    </div>
+      
+ <div class="panel-body">
+
       <div class="container">
       <div class="row">
       <div class="col-sm-4">
       <div class="form-group">
-      <br>
-    
+      
       <label for="Vndr_nm">Vendor Name</label>
       <input type="text" class="form-control" name="Vndr_nm" placeholder="Enter Vendor Name"/>
       </div>
-   
+      
+      <div class="form-group"> 
       <label for="Vndr_Mail_City">Vendor City</label>
       <input type="text" class="form-control" name="Vndr_Mail_City" placeholder="Enter Vendor City"/>
+      </div>
       </div>
       <!-------------COL 2 --->
       <div class="col-sm-4">
       
-      <br>
+      <div class="form-group">
+      <label for="Vndr_Mail_St">Vendor State</label>
+      <input type="text" class="form-control" name="Vndr_Mail_St" placeholder="Enter Vendor State"/>
+      </div>
+      
+      <div class="form-group">
       <label for="Vndr_Mail_Addr">Vendor Address #1</label>
       <input type="text" class="form-control" name="Vndr_Mail_Addr" placeholder="Enter Vendor Address"/>
+      </div>
+      </div>
+      <!-------------COL 3 --->
       
-      <br>
-      <label for="Vndr_nm">Vendor State</label>
-      <input type="text" class="form-control" name="Vndr_Mail_St" placeholder="Enter Vendor State"/>
+      <div class="col-sm-4">
+      
+      <div class="form-group">
+      <label for="Vndr_Mail_Zip_Cd">Vendor Zip Code</label>
+      <input type="text" class="form-control" name="Vndr_Mail_Zip_Cd" placeholder="Enter Vendor Zip Code"/>
+      </div>
       
       </div>
   
 </div>
 </div>
-      <br>
+     
 <!----------FORWARD TO ACCOUNTING--->
-             <article>
-    <h3>Education/ Registration Payment Information</h3>
-             </article>
-             
-      <p>This section is to be used to pay for Education (classes) or Registration
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Education/ Registration Payment Information</h3>
+    </div>
+  </div>
+    
+    <div class="panel-body">
+    
+      <p>&nbsp &nbsp This section is to be used to pay for Education (classes) or Registration
       (seminars, conferences, conventions or workshops) expenses only. 
       Detail regarding other travel expenses can be found in the 
       Policy and Procedures section of the Controller Web Site.</p>
-      
-      <div class="radio">
-        
-        <h4>Forward To Accounting?</h4>
-        
-      <label><input type="radio">Yes
-             <br>
-             <input type="radio">No</label>
     </div>
+    
+            <!-------------YES/NO BUTTONS --->
+      <h3><span class="label label-default">Forward To Accounting?</span></h3>
+    
+    <label class="checkbox-inline"><input type="checkbox" value="">Yes</label>
+    <label class="checkbox-inline"><input type="checkbox" value="">No</label>             
+      
+             <!-------------SUBMIT BUTTON --->
+    
+   <div class="col-md-12 text-center">
+      <button type="submit" class="btn btn-secondary btn-lg">Submit</button> 
+   </div>
+     </div>
+     </div>
+     </div>
+     
+      </main> 
+  
       <!-------------COL 2 --->
-      <input type="submit" value="Submit">
-      
-      </form>
-      
-      
 
 </body>
+
+<footer>
+		<div id="footer">
+	
+			<h6>THIS SPACE IS RESERVED FOR FOOTER CONTENTS</h6>
+			
+		</div>
+	 </footer>
 </html>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 
@@ -241,4 +304,3 @@
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
-
